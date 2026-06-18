@@ -1,0 +1,104 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Landscape / Desktop */
+.game {
+  flex: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  /* 🔥 prevents weird scroll-based shifts */
+  position: relative;
+}
+
+.panel {
+  flex: 1; /* 1/3 */
+}
+
+.control-panel {
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+
+  button,
+  input {
+    padding: 0.25em;
+    text-align: center;
+  }
+}
+
+.control-panel input::placeholder {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.control-panel input:focus::placeholder {
+  opacity: 0;
+}
+
+.control-panel > * {
+  width: -webkit-fill-available;
+  margin-top: 0.25em;
+}
+
+.phaser-wrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+
+  /* 🔥 KEY: ensures canvas is contained properly */
+  position: relative;
+}
+
+.phaser-wrapper canvas {
+  display: block;
+
+  /* prevents baseline/inline shift */
+  margin: 0 auto;
+  margin-top: unset !important;
+  margin-bottom: unset !important;
+  margin-left: unset !important;
+  margin-right: unset !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  /* Portrait / Mobile */
+  .game,
+  .panel {
+    flex: none;
+    width: 100%;
+  }
+
+  // .phaser-wrapper {
+  //   align-items: center;
+  // }
+}

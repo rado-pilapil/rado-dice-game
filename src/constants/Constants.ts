@@ -1,9 +1,5 @@
 export const GAME_CONSTANTS = {
-  //   DEFAULT_TARGET: 50,
-  //   MIN_TARGET: 1,
-  //   MAX_TARGET: 100,
   MAX_HISTORY_ITEMS: 10,
   DICE_MIN_VALUE: 1,
-  //   DICE_MAX_VALUE: 100,
   DICE_MAX_VALUE: 100,
 } as const;

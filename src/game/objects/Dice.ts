@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import { BridgeEvents, gameEvents } from "../bridge/events";
+// import { BridgeEvents, gameEvents } from "../bridge/events";
 import { GAME_CONSTANTS } from "../../constants/Constants";
 
 export class Dice {
@@ -36,8 +36,8 @@ export class Dice {
   public roll(result: number, onComplete: () => void) {
     if (this.rolling) return;
 
-    const sound = this.scene.sound.play("rollDice", { volume: 1 });
-    console.log("sound instance:", sound);
+    // const sound = this.scene.sound.play("rollDice", { volume: 1 });
+    // console.log("sound instance:", sound);
 
     this.rolling = true;
 
@@ -73,12 +73,7 @@ export class Dice {
       duration: 1100,
       ease: "Cubic.easeOut",
 
-      onStart: () => {
-        console.log("ROLL SOUND TRIGGERED");
-
-        // this.scene.sound?.play?.("roll", { volume: 0.4 });
-        // // this.scene.sound?.play?.("rollDice", { volume: 1 });
-      },
+      onStart: () => {},
 
       onComplete: () => {
         this.container.setScale(1);

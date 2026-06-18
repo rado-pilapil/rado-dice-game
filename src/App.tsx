@@ -31,16 +31,8 @@ function App() {
     handleRollComplete,
   } = game || {};
 
-  // useEffect(() => {
-  //   gameEvents.on(BridgeEvents.ROLL_COMPLETE, game.handleRollComplete);
-
-  //   return () => {
-  //     gameEvents.off(BridgeEvents.ROLL_COMPLETE, game.handleRollComplete);
-  //   };
-  // }, [game.handleRollComplete]);
   useEffect(() => {
     const handler = (value: number) => {
-      // game.handleRollComplete(value);
       handleRollComplete(value);
     };
 
@@ -71,7 +63,6 @@ function App() {
 
   return (
     <div className="container">
-      {/* {!ready && <div>Loading...</div>} */}
       {!ready && <LoadingOverlay />}
 
       <div className="game">

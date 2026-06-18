@@ -5,10 +5,7 @@ import { gameEvents, BridgeEvents } from "../game/bridge/events";
 import { GAME_CONSTANTS } from "@constants/Constants";
 
 export function useDiceGame() {
-  const [target, setTarget] = useState<string>(
-    // Math.floor(GAME_CONSTANTS.DICE_MAX_VALUE / 2).toString(),
-    "",
-  );
+  const [target, setTarget] = useState<string>("");
 
   const [rolling, setRolling] = useState(false);
 
@@ -27,7 +24,6 @@ export function useDiceGame() {
   const roll = () => {
     if (rolling) return;
 
-    // const randomResult = Math.floor(Math.random() * 100) + 1;
     const randomResult =
       Math.floor(Math.random() * GAME_CONSTANTS.DICE_MAX_VALUE) + 1;
 

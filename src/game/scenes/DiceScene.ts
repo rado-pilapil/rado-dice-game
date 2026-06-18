@@ -108,7 +108,6 @@ export class DiceScene extends Phaser.Scene {
     if (this.rolling) return;
 
     const sound = this.sound.play("rollDice", { volume: 5 });
-    console.log("sound instance:", sound);
 
     this.rolling = true;
 

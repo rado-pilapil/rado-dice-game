@@ -36,9 +36,6 @@ export class Dice {
   public roll(result: number, onComplete: () => void) {
     if (this.rolling) return;
 
-    // const sound = this.scene.sound.play("rollDice", { volume: 1 });
-    // console.log("sound instance:", sound);
-
     this.rolling = true;
 
     let count = 0;

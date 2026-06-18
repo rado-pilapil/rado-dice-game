@@ -23,8 +23,8 @@ A hybrid React + Phaser.js dice rolling game with animated physics-based rolling
 📦 Installation
 
 1. Clone the repository
-   git clone https://github.com/your-username/react-phaser-dice-game.git
-   cd react-phaser-dice-game
+   git clone https://github.com/rado-pilapil/rado-dice-game.git
+   cd rado-dice-game
 
 2. Install dependencies
    Using npm:

@@ -17,7 +17,7 @@ A hybrid React + Phaser.js dice rolling game with animated physics-based rolling
 
 - React (Vite / CRA compatible)
 - TypeScript
-- Phaser 3
+- Phaser v4.1.0
 - Event-based bridge system (React ↔ Phaser)
 
 📦 Installation

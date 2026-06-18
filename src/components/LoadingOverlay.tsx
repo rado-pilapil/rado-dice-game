@@ -9,6 +9,7 @@ export default function LoadingOverlay() {
         justifyContent: "center",
         background: "#111827",
         color: "white",
+        fontSize: "3em",
       }}
     >
       Loading Dice Game...

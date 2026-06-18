@@ -59,6 +59,10 @@ function App() {
     return () => window.removeEventListener("keydown", keyHandler);
   }, [target]);
 
+  useEffect(() => {
+    gameEvents.on(BridgeEvents.READY, () => setReady(true));
+  }, []);
+
   if (error) return <div>Failed to load game</div>;
 
   return (

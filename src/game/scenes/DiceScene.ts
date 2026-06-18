@@ -8,7 +8,6 @@ import { ASSETS } from "@game/assets";
 
 export class DiceScene extends Phaser.Scene {
   private diceText!: Phaser.GameObjects.Text;
-
   private diceContainer!: Phaser.GameObjects.Container;
   private diceBox!: Phaser.GameObjects.Rectangle;
 
@@ -107,7 +106,7 @@ export class DiceScene extends Phaser.Scene {
   private rollDice(result: number) {
     if (this.rolling) return;
 
-    const sound = this.sound.play("rollDice", { volume: 5 });
+    this.sound.play("rollDice", { volume: 5 });
 
     this.rolling = true;
 
